@@ -57,6 +57,7 @@ namespace PoopBot
         {
             _emoteList = new List<Emote>
             {
+                //TODO: Add ghost emote
                 //add desired emotes here.
                 //acquire them by typing out the emote in your server, then adding a backslash infront of it.
                 Emote.Parse("<:NotSureDank:720454064042672188>")
@@ -66,6 +67,7 @@ namespace PoopBot
 
         private async Task MessageReceived(SocketMessage msg)
         {
+            //TODO: Change to Command pattern and include a command to un-monitor
             if (msg.Content == "!monitor")
             {
                 if (!_monitoredChannels.Contains(msg.Channel.Id))
